@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Health Assistant</title>
+    <link rel="shortcut icon" href="avatar.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <section class="main">
+        <div class="image-container">
+            <!--<div class="image">
+                <img src="health-assistant.gif" alt="Health Assistant">
+            </div> -->
+            <h1>Health Assistant</h1>
+            <p>I am a Virtual Health Assistant. How may I help you?</p>
+        </div>
+
+        <!-- Input Section with Speech and Text -->
+        <div class="input">
+            <button class="talk"><i class="fas fa-microphone-alt"></i></button>
+            <input type="text" id="textInput" placeholder="Type your message here..." />
+            <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        
+        <!-- Chat Display Area -->
+        <div class="chat-container">
+            <div id="chatbox"></div>
+        </div>
+
+        <!-- Medical Guidance Section -->
+        <div class="more-info">
+            <p>For more medical guidance, visit:</p>
+            <a id="medicalLink" href="https://www.webmd.com/" target="_blank" class="info-button">Learn More</a>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
