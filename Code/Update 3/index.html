@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Health Assistant</title>
+    <link rel="shortcut icon" href="avatar.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <section class="main">
+        <div class="image-container">
+            <h1>Health Assistant</h1>
+            <p>I am a Virtual Health Assistant. How may I help you?</p>
+        </div>
+
+        <!-- Language Selection Dropdown -->
+        <div class="language-selector">
+            <label for="language">Choose Language: </label>
+            <select id="language">
+                <option value="en">English</option>
+                <option value="es">Spanish (Español)</option>
+                <option value="hi">Hindi (हिन्दी)</option>
+                <option value="ta">Tamil (தமிழ்)</option>
+            </select>
+        </div>
+
+        <!-- Chat Display Area -->
+        <div class="chat-container">
+            <div id="chatbox"></div>
+        </div>
+
+        <!-- Input Section with Speech and Text -->
+        <div class="input-container">
+            <div class="input">
+                <button class="talk"><i class="fas fa-microphone-alt"></i></button>
+                <input type="text" id="textInput" placeholder="Type your message here..." />
+                <button id="sendBtn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+        <!-- Medical Guidance Section -->
+        <div class="more-info">
+            <p>For more medical guidance, visit:</p>
+            <a id="medicalLink" href="https://www.webmd.com/" target="_blank" class="info-button">Learn More</a>
+        </div>
+
+        <!-- Doctor Appointment Booking -->
+        <div class="appointment-section">
+            <h2>Book a Doctor's Appointment</h2>
+            <input type="date" id="appointmentDate">
+            <input type="time" id="appointmentTime">
+            <button id="bookAppointment">Book Now</button>
+            <p id="appointmentMessage"></p>
+        </div>
+
+        <!-- Fitness Data -->
+        <div class="fitness-section">
+            <button id="checkFitness">Check Heart Rate</button>
+            <p id="fitnessMessage"></p>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

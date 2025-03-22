@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+/* Main Container */
+.main {
+    min-height: 100vh;
+    width: 100%;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Image Section */
+.main .image-container {
+    padding: 10px;
+    text-align: center;
+}
+
+.main .image-container .image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main .image-container .image img {
+    width: 350px;
+    align-items: center;
+}
+
+.main .image-container h1 {
+    color: #00bcd4;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.main .image-container p {
+    color: #aed0d0;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Language Selection Dropdown */
+.language-selector {
+    margin: 10px;
+    text-align: center;
+    color: #00bcd4;
+    font-size: 18px;
+}
+
+.language-selector select {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #00bcd4;
+    background: #121212;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Input Section (Speech & Text) */
+.input-container {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main .input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 50px;
+    border-radius: 25px;
+    background: rgba(202, 253, 255, 0.5);
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.main .input .talk, .main .input #sendBtn {
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.main .input .talk i, .main .input #sendBtn i {
+    font-size: 20px;
+    color: #00bcd4;
+}
+
+.main .input #textInput {
+    flex-grow: 1;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 16px;
+    background: #f0f8ff;
+}
+
+/* Chat Container */
+.chat-container {
+    width: 60vw;
+    height: 300px;
+    overflow-y: auto;
+    margin-top: 10px;
+    padding: 10px;
+    background: #121212;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #00bcd4;
+}
+
+#chatbox {
+    color: #ffffff;
+    font-size: 16px;
+    white-space: pre-wrap;
+}
+
+/* Chat Messages */
+.chat-container p {
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px;
+    max-width: 80%;
+}
+
+/* User Message */
+.chat-container p.user {
+    background: #00bcd4;
+    color: black;
+    align-self: flex-end;
+}
+
+/* Bot Message */
+.chat-container p.bot {
+    background: #333;
+    color: white;
+    align-self: flex-start;
+}
+
+/* Scrollbar Styling */
+.chat-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background: #00bcd4;
+    border-radius: 5px;
+}
+
+/* Medical Guidance Section */
+.more-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.more-info p {
+    color: #00bcd4;
+    font-size: 16px;
+}
+
+.more-info .info-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #00bcd4;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.more-info .info-button:hover {
+    background: #008ba3;
+}
+
+/* Doctor Appointment Section */
+.appointment-section {
+    text-align: center;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    width: 60vw;
+}
+
+.appointment-section h2 {
+    color: #00bcd4;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.appointment-section input {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #000;
+}
+
+#bookAppointment {
+    background: #00bcd4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#bookAppointment:hover {
+    background: #008ba3;
+}
+
+#appointmentMessage {
+    margin-top: 10px;
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+/* Fitness Data Section */
+.fitness-section {
+    text-align: center;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    width: 60vw;
+}
+
+#checkFitness {
+    background: #00bcd4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#checkFitness:hover {
+    background: #008ba3;
+}
+
+#fitnessMessage {
+    margin-top: 10px;
+    color: #00bcd4;
+    font-weight: bold;
+}
